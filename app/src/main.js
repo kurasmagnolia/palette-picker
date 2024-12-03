@@ -1,5 +1,8 @@
 import "./style.css";
 import { v4 as generateUUID } from "uuid";
+import palettes from "./palettes.json";
+console.log(palettes);
+const newPaletteID = generateUUID();
 
 // Ordinarily, you'd add these elements to index.html
 const uuidButton = document.createElement("button");
