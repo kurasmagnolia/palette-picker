@@ -12,3 +12,7 @@ form {
   width: 300px;
   margin: 0 auto;
 }
+
+fieldset {
+  border: 0;
+}
