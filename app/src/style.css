@@ -11,6 +11,7 @@ form {
   height: 300px;
   width: 300px;
   margin: 0 auto;
+  gap: 0.5rem;
 }
 
 fieldset {
@@ -21,6 +22,10 @@ fieldset {
   display: flex;
   align-items: center;
   gap: 0.2rem;
+}
+
+h1 {
+  margin: 0;
 }
 
 h1,
