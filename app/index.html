@@ -14,37 +14,37 @@
 
         <!-- Title Input -->
         <div class="title-input">
-          <label for="palette-title">Palette Title:</label>
-          <input type="text" id="palette-title" required />
+          <label for="title">Palette Title:</label>
+          <input type="text" id="title" required name="title" />
         </div>
 
         <!-- Color Inputs -->
         <div class="color-option">
           <label for="color-1">Color #1</label>
-          <input type="color" id="color-1" value="#ffffff" />
+          <input type="color" id="color-1" name="color1" value="#ffffff" />
         </div>
 
         <div class="color-option">
           <label for="color-2">Color #2</label>
-          <input type="color" id="color-2" value="#ffffff" />
+          <input type="color" id="color-2" name="color2" value="#ffffff" />
         </div>
 
         <div class="color-option">
           <label for="color-3">Color #3</label>
-          <input type="color" id="color-3" value="#ffffff" />
+          <input type="color" id="color-3" name="color3" value="#ffffff" />
         </div>
 
         <!-- Temperature Settings -->
         <fieldset>
           <legend>Temperature</legend>
 
-          <input type="radio" id="warm-temp" name="temp-option" />
+          <input type="radio" id="warm-temp" name="warmTemp" />
           <label for="warm-temp">Warm</label>
 
-          <input type="radio" id="neutral-temp" name="temp-option" checked />
+          <input type="radio" id="neutral-temp" name="neutralTemp" checked />
           <label for="neutral-temp">Neutral</label>
 
-          <input type="radio" id="cool-temp" name="temp-option" />
+          <input type="radio" id="cool-temp" name="coolTemp" />
           <label for="cool-temp">Cool</label>
         </fieldset>
         <button type="submit">Create the palette</button>
