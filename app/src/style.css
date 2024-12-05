@@ -12,6 +12,7 @@ form {
   width: 300px;
   margin: 0 auto;
   gap: 0.5rem;
+  box-shadow: 0 6px 10px #6a6a6a;
 }
 
 fieldset {

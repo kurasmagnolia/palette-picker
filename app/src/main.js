@@ -1,6 +1,6 @@
 import "./style.css";
 import { v4 as generateUUID } from "uuid";
-import palettes from "./palettes.json";
+import palettes from "./starting-palettes.json";
 console.log(palettes);
 const newPaletteID = generateUUID();
 
