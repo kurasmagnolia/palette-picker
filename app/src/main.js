@@ -16,7 +16,7 @@ const renderPalettes = () => {
 
   // get object of palettes from localStorage
   const palettes = getPalettes();
-  console.log(palettes);
+
   // for each palette in the object, make it an li and append it to the ul
   for (const [key, value] of Object.entries(palettes)) {
     const li = document.createElement("li");

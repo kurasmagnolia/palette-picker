@@ -1,5 +1,4 @@
 import startingPalettes from "./starting-palettes.json";
-console.log(startingPalettes);
 
 // 1. setLocalStorageKey - a wrapper that automatically stringifies the value and sets it to the key
 const setLocalStorageKey = (key, value) => {
@@ -34,7 +33,6 @@ export const initializePalettesIfEmpty = () => {
     setPalettes(startingPalettes);
   }
 };
-console.log(initializePalettes);
 
 export const addPalette = (newPalette) => {
   const storedPalettes = getPalettes();
