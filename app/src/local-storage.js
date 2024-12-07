@@ -43,3 +43,10 @@ export const addPalette = (newPalette) => {
 
     return newPalette;
 };
+
+export const deletePaletteByID = (paletteToRemove) => {
+    const palettes = getPalettes();
+    const filteredPalettes = palettes.filter((palette) => palette !== paletteToRemove);
+    setLocalStorageKey('palettes', filteredPalettes);
+
+}
