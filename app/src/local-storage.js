@@ -17,3 +17,11 @@ const getLocalStorageKey = (key) => {
 
 export const setPalettes = (newPalettes) =>
   setLocalStorageKey("palettes", newPalettes);
+
+export const getPalettes = () => {
+  const storedPalettes = getLocalStorageKey("palettes");
+  if (!storedPalettes) {
+    return {};
+  }
+  return storedPalettes;
+};
