@@ -25,3 +25,11 @@ export const getPalettes = () => {
   }
   return storedPalettes;
 };
+
+export const initializePalettes = () => {
+  const storedPalettes = getPalettes();
+
+  if (!storedPalettes || Object.keys(storedPalettes).length === 0) {
+    setPalettes(startingPalettes);
+  }
+};
