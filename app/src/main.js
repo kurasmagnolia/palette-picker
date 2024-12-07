@@ -31,7 +31,7 @@ const handleFormSubmit = (e) => {
   const newPaletteCoolTemp = e.target.coolTemp.value;
 
   // reset the form
-  e.reset();
+  e.target.reset();
 };
 
 const main = () => {
