@@ -38,13 +38,19 @@
         <fieldset>
           <legend>Temperature</legend>
 
-          <input type="radio" id="warm-temp" name="warmTemp" />
+          <input type="radio" id="warm-temp" name="temp" value="warm" />
           <label for="warm-temp">Warm</label>
 
-          <input type="radio" id="neutral-temp" name="neutralTemp" checked />
+          <input
+            type="radio"
+            id="neutral-temp"
+            name="temp"
+            value="neutral"
+            checked
+          />
           <label for="neutral-temp">Neutral</label>
 
-          <input type="radio" id="cool-temp" name="coolTemp" />
+          <input type="radio" id="cool-temp" name="temp" value="cool" />
           <label for="cool-temp">Cool</label>
         </fieldset>
         <button type="submit">Create the palette</button>

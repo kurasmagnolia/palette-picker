@@ -1,6 +1,5 @@
 import "./style.css";
 import { getPalettes, initializePalettes } from "./local-storage";
-const newPaletteID = crypto.randomUUID();
 
 const handleFormSubmit = (e) => {
   // prevent the default action
@@ -11,10 +10,20 @@ const handleFormSubmit = (e) => {
   const newPaletteColorOne = e.target.color1.value;
   const newPaletteColorTwo = e.target.color2.value;
   const newPaletteColorThree = e.target.color3.value;
-  const newPaletteWarmTemp = e.target.warmTemp.value;
-  const newPaletteNeutralTemp = e.target.neutralTemp.value;
-  const newPaletteCoolTemp = e.target.coolTemp.value;
+  const newPaletteTemp = e.target.temp.value;
 
+  // store palettes
+  const palettes = {};
+
+  // create new palette
+  const newPalette = {
+    uuid: crypto.randomUUID(),
+    title: newPaletteTitle,
+    colors: [newPaletteColorOne, newPaletteColorTwo, newPaletteColorThree],
+    temperature: newPaletteTemp,
+  };
+  palettes[newPalette.uuid] = newPalette;
+  console.log(palettes);
   // reset the form
   e.target.reset();
 };
@@ -25,7 +34,7 @@ const main = () => {
     initializePalettes();
   }
   // render the exisitig palettes
-  renderPalettes();
+  //renderPalettes();
   // attach the form event handler to listen for the submit event
   document.querySelector("form").addEventListener("submit", handleFormSubmit);
 };
