@@ -14,3 +14,6 @@ const getLocalStorageKey = (key) => {
     return null;
   }
 };
+
+export const setPalettes = (newPalettes) =>
+  setLocalStorageKey("palettes", newPalettes);
