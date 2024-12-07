@@ -1,11 +1,39 @@
 import "./style.css";
 import {
   getPalettes,
-  initializePalettes,
+  initializePalettesIfEmpty,
   addPalette,
   deletePaletteByID,
 } from "./local-storage.js";
 import { showPalettes, addPaletteToList } from "./dom-helpers.js";
+
+const renderPalettes = () => {
+  // grab the url inside of our index.html
+  const palleteList = document.querySelector("ul");
+
+  // empty the ul
+  palleteList.innerHTML = "";
+
+  // get object of palettes from localStorage
+  const palettes = getPalettes();
+  console.log(palettes);
+  // for each palette in the object, make it an li and append it to the ul
+  for (const [key, value] of Object.entries(palettes)) {
+    const li = document.createElement("li");
+
+    const { uuid, title, colors, temperature } = value;
+
+    li.innerHTML = `
+    <div class="palette-box">
+      <h2>${title}</h2>
+      <div></div>
+      <div class="palette-temp-color">
+        <p>${temperature}</p>
+      </div>
+    `;
+    palleteList.append(li);
+  }
+};
 
 const handleFormSubmit = (e) => {
   // prevent the default action
@@ -29,8 +57,8 @@ const handleFormSubmit = (e) => {
   // stores palette in localStorage
   addPalette(newPalette);
 
-  // stores the palette in the Palettes List
-  addPaletteToList(newPalette);
+  // re-renders the whole list
+  renderPalettes();
 
   // reset the form
   e.target.reset();
@@ -38,11 +66,9 @@ const handleFormSubmit = (e) => {
 
 const main = () => {
   // the very first time the user loads this, add palattes to localStorage
-  if (!getPalettes()) {
-    initializePalettes();
-  }
-  // render the exisitig palettes
-  //renderPalettes();
+  initializePalettesIfEmpty();
+  // render the exisiting palettes
+  renderPalettes();
   // attach the form event handler to listen for the submit event
   document.querySelector("form").addEventListener("submit", handleFormSubmit);
 };
