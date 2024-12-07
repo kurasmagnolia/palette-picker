@@ -33,3 +33,13 @@ export const initializePalettes = () => {
     setPalettes(startingPalettes);
   }
 };
+
+export const addPalette = (newPalette) => {
+    const storedPalettes = getPalettes();
+
+    storedPalettes(newPalette.uuid) = newPalette;
+
+    setPalettes(storedPalettes);
+
+    return newPalette;
+};
