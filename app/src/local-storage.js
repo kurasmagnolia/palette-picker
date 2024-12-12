@@ -26,28 +26,22 @@ export const getPalettes = () => {
   return storedPalettes;
 };
 
+export const deletePaletteByID = (id) => {
+  const palettes = getPalettes();
+
+  delete palettes[id];
+
+  const palette = document.getElementById(id);
+
+  palette.remove();
+
+  setPalettes(palettes);
+};
+
 export const initializePalettesIfEmpty = () => {
   const storedPalettes = getPalettes();
 
   if (!storedPalettes || Object.keys(storedPalettes).length === 0) {
     setPalettes(startingPalettes);
   }
-};
-
-export const addPalette = (newPalette) => {
-  const storedPalettes = getPalettes();
-
-  storedPalettes[newPalette.uuid] = newPalette;
-
-  setPalettes(storedPalettes);
-
-  return newPalette;
-};
-
-export const deletePaletteByID = (paletteToRemove) => {
-  const palettes = getPalettes();
-  const filteredPalettes = palettes.filter(
-    (palette) => palette !== paletteToRemove
-  );
-  setLocalStorageKey("palettes", filteredPalettes);
 };

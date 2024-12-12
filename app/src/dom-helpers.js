@@ -10,3 +10,8 @@ export const addPaletteToList = (palette) => {
   li.textContent = palette.title;
   li.dataset.uuid = palette.uuid;
 };
+
+export const renderPalette = () => {
+  // grab the ul inside of our index.html
+  const palleteList = document.querySelector("ul");
+};
