@@ -9,7 +9,7 @@
   <body>
     <h1>Palette Picker</h1>
     <main>
-      <form>
+      <form aria-labelledby="palette-form">
         <h2>Add a Palette</h2>
 
         <!-- Title Input -->
@@ -56,11 +56,53 @@
         <button type="submit">Create the palette</button>
       </form>
 
-      <section class="palette-section">
+      <section class="palette-section" aria-labelledby="palette-section">
         <h2>Palettes</h2>
 
         <ul id="palette-list">
-          <li clsss="palette"></li>
+          <li class="palette">
+            <div class="palette-container">
+              <h3 class="palette-title">Marcy</h3>
+
+              <!-- left side displaying colors with copy button -->
+              <div class="display-colors">
+                <div class="alignment">
+                  <div class="outer-box">
+                    <div class="first-inner-color">
+                      <span class="first-word">Text</span
+                      ><span class="second-word">Example</span>
+                    </div>
+                  </div>
+                  <button class="copy-button" type="submit">Copy</button>
+                </div>
+
+                <div class="alignment">
+                  <div class="outer-box">
+                    <div class="second-inner-color">
+                      <span class="first-word">Text</span
+                      ><span class="second-word">Example</span>
+                    </div>
+                  </div>
+                  <button class="copy-button" type="submit">Copy</button>
+                </div>
+
+                <div class="alignment">
+                  <div class="outer-box">
+                    <div class="third-inner-color">
+                      <span class="first-word">Text</span
+                      ><span class="second-word">Example</span>
+                    </div>
+                  </div>
+                  <button class="copy-button" type="submit">Copy</button>
+                </div>
+              </div>
+
+              <button type="submit" class="delete-palette">
+                Delete Palette
+              </button>
+              <div class="temperature-banner"></div>
+            </div>
+          </li>
         </ul>
       </section>
     </main>

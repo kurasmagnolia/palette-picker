@@ -16,7 +16,7 @@ form {
   height: 300px;
   width: 300px;
   margin: 0 auto;
-  gap: 0.5rem;
+  gap: 1.1rem;
   box-shadow: 0 6px 10px #6a6a6a;
 }
 
@@ -34,9 +34,60 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  margin-top: 5px;
+}
+
 h1,
 h2,
 label,
 legend {
   color: #e4e4e4;
+}
+
+.palette-container {
+  background-color: #333333;
+  height: 350px;
+  width: 300px;
+  border-radius: 0 35px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.palette-container .palette-title {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.palette-container .outer-box {
+  border: 2px solid;
+  background: linear-gradient(to bottom, white 50%, black 50%);
+  width: 100px;
+  height: 50px;
+}
+
+.palette-container .alignment {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 1.75rem;
+}
+
+.palette-container .first-word {
+  color: white;
+}
+
+.palette-container .second-word {
+  color: black;
+}
+
+.palette-container .copy-button {
+  width: 100px;
+  height: 40px;
+}
+
+.palette-container .temperature-banner {
+  background-color: #555555;
 }

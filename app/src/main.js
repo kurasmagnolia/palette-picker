@@ -40,6 +40,11 @@ const handleFormSubmit = (e) => {
   e.target.reset();
 };
 
+const handleDeleteSubmit = (e) => {
+  // prevent the default action
+  e.preventDefault();
+};
+
 const main = () => {
   // the very first time the user loads this, add palattes to localStorage
   initializePalettesIfEmpty();
@@ -47,6 +52,10 @@ const main = () => {
   renderPalette();
   // attach the form event handler to listen for the submit event
   document.querySelector("form").addEventListener("submit", handleFormSubmit);
+  // attach an event listener to listen for the submit event on the delete palette button
+  document
+    .querySelector("#delete-pallete")
+    .addEventListener("submit", handleDeleteSubmit);
 };
 
 main();
