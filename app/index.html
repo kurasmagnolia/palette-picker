@@ -53,57 +53,13 @@
           <input type="radio" id="cool-temp" name="temp" value="cool" />
           <label for="cool-temp">Cool</label>
         </fieldset>
-        <button type="submit">Create the palette</button>
+        <button type="submit" class="create-btn">Create the palette</button>
       </form>
 
       <section class="palette-section" aria-labelledby="palette-section">
-        <h2>Palettes</h2>
+        <h2 class="palette-section-header">Palettes</h2>
 
-        <ul id="palette-list">
-          <li class="palette">
-            <div class="palette-container">
-              <h3 class="palette-title">Marcy</h3>
-
-              <!-- left side displaying colors with copy button -->
-              <div class="display-colors">
-                <div class="alignment">
-                  <div class="outer-box">
-                    <div class="first-inner-color">
-                      <span class="first-word">Text</span
-                      ><span class="second-word">Example</span>
-                    </div>
-                  </div>
-                  <button class="copy-button" type="submit">Copy</button>
-                </div>
-
-                <div class="alignment">
-                  <div class="outer-box">
-                    <div class="second-inner-color">
-                      <span class="first-word">Text</span
-                      ><span class="second-word">Example</span>
-                    </div>
-                  </div>
-                  <button class="copy-button" type="submit">Copy</button>
-                </div>
-
-                <div class="alignment">
-                  <div class="outer-box">
-                    <div class="third-inner-color">
-                      <span class="first-word">Text</span
-                      ><span class="second-word">Example</span>
-                    </div>
-                  </div>
-                  <button class="copy-button" type="submit">Copy</button>
-                </div>
-              </div>
-
-              <button type="submit" class="delete-palette">
-                Delete Palette
-              </button>
-              <div class="temperature-banner"></div>
-            </div>
-          </li>
-        </ul>
+        <ul class="palette-container" id="palette-list"></ul>
       </section>
     </main>
     <script type="module" src="/src/main.js"></script>

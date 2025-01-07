@@ -40,7 +40,6 @@ export const deletePaletteByID = (id) => {
 
 export const initializePalettesIfEmpty = () => {
   const storedPalettes = getPalettes();
-
   if (!storedPalettes || Object.keys(storedPalettes).length === 0) {
     setPalettes(startingPalettes);
   }
