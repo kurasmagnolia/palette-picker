@@ -1,10 +1,12 @@
-import "./style.css";
-import { getPalettes, initializePalettesIfEmpty } from "./local-storage.js";
-import { renderPalette, handleFormSubmit } from "./dom-helpers.js";
+/** @format */
+
+import './style.css';
+import { getPalettes, initializePalettesIfEmpty } from './local-storage.js';
+import { renderPalette, handleFormSubmit } from './dom-helpers.js';
 
 const main = () => {
   // attach the form event handler to listen for the submit event
-  document.querySelector("form").addEventListener("submit", handleFormSubmit);
+  document.querySelector('form').addEventListener('submit', handleFormSubmit);
 
   // the very first time the user loads this, add palattes to localStorage
   initializePalettesIfEmpty();
