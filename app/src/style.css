@@ -1,12 +1,15 @@
+/** @format */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #181818;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 form {
@@ -137,16 +140,19 @@ legend {
   margin: 0.5rem;
 }
 
+/* styling for first word (Text)  */
 .first-word {
   color: #ffffff;
   margin: 0;
 }
 
+/* styling for second word (Example) */
 .second-word {
   color: #000000;
   margin: 0;
 }
 
+/* styling for copy button on palette */
 .copy-btn {
   background-color: #6c6c6c;
   color: white;
@@ -159,6 +165,7 @@ legend {
   height: 40px;
 }
 
+/* styling for delete button on palette */
 .delete-btn {
   background-color: #6b6b6b;
   color: white;
@@ -173,6 +180,7 @@ legend {
   text-align: center;
 }
 
+/* styling for temperature footer at palette bottom */
 .palette-footer {
   background-color: #5a5a5a;
   padding: 8px;
