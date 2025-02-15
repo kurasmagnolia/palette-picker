@@ -7,7 +7,7 @@ const setLocalStorageKey = (key, value) => {
   localStorage.setItem(key, JSON.stringify(value));
 };
 
-// 2.
+// 2. getLocalStorageKey - a wrapper that retrieves the palettes from localStorage using the key wrapped in a try/catch
 const getLocalStorageKey = (key) => {
   try {
     return JSON.parse(localStorage.getItem(key));
